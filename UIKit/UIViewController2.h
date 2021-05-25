@@ -9,7 +9,7 @@
 #import <UIKit/UIResponder.h>
 #import <Availability2.h>
 
-@class UINavigationItem, UITabBarItem, NSBundle, NSHashTable, UINavigationController, UITabBarController, UITransitionView, NSArray, UIView, UIBarButtonItem, NSString, UISearchDisplayController;
+@class UINavigationItem, UITabBarItem, NSBundle, NSHashTable, UINavigationController, UITabBarController, UITransitionView, NSArray, UIView, UIBarButtonItem, NSString, UISearchDisplayController, UIDropShadowView;
 
 @interface UIViewController ()
 +(BOOL)doesOverrideViewControllerMethod:(SEL)method;
@@ -27,8 +27,8 @@
 +(double)durationForTransition:(int)transition;
 +(BOOL)_doesOverrideLegacyShouldAutorotateMethod;
 -(void)_doCommonSetup;
--(id)init;
--(id)initWithCoder:(id)coder;
+-(instancetype)init;
+-(nullable instancetype)initWithCoder:(NSCoder *)coder;
 -(void)awakeFromNib;
 -(void)_populateArchivedChildViewControllers:(id)controllers;
 -(BOOL)_shouldPersistViewWhenCoding;
